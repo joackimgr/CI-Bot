@@ -24,12 +24,14 @@ Answer returned to student in Greek.
 
 # Tech Stack
 
-- Backend: Node.js + Express
-- LLM: Ollama - ```gemma3:12b```
-- Embeddings: Ollama - ```nomic-embed-text```
-- Vector Store: In-memory JSON (persisted to vector_store.json)
-- WordPress Integration: Custom PHP Plugin (REST API proxy)
-- Scheduling: ```node-cron``` (weekly re-embed every Friday at 23:00)
+| Component | Technology |
+|-----------|------------|
+| Backend | Node.js + Express |
+| LLM | Ollama - ```gemma3:12b``` |
+| Embeddings | Ollama - ```nomic-embed-text``` |
+| Vector Store | In-memory JSON (persisted to vector_store.json) |
+| WordPress Integration | Custom PHP Plugin (REST API proxy) |
+| Scheduling | ```node-cron``` (weekly re-embed every Friday at 23:00) |
 
 # Features
 
@@ -95,4 +97,16 @@ Upload ```CI_Bot_Plugin.php``` to your WordPress installation under ```wp-conten
 curl -X POST http://localhost:3000/chat \
   -H "Content-Type: application/json" \
   -d '{"message": "Ποιες είναι οι κατευθύνσεις του ΠΜΣ;", "history": []}'
+```
+# Project Structure
+```
+CI-Bot/
+├── server.js                        # Node.js RAG backend
+├── CI_Bot_Plugin.php                # WordPress chat widget plugin
+├── vector_store.json                # Auto-generated, do not commit
+├── .env                             # Secret config, do not commit
+├── .env.example                     # Template for environment variables
+├── .gitignore
+├── package.json
+└── README.md
 ```
