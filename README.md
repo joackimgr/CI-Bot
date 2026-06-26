@@ -103,6 +103,9 @@ curl -X POST http://localhost:3000/chat \
 CI-Bot/
 ├── server.js                        # Node.js RAG backend
 ├── CI_Bot_Plugin.php                # WordPress chat widget plugin
+├── docs/                            # Reference documents & reports
+│   ├── Wordpress AI Chatbots Review.xlsx   # AI chatbot comparison review
+│   └── Thesis_Report.pdf                   # BSc thesis report
 ├── vector_store.json                # Auto-generated, do not commit
 ├── .env                             # Secret config, do not commit
 ├── .env.example                     # Template for environment variables
